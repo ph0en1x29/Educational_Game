@@ -36,13 +36,26 @@ public class QuizQuestion {
             questions.add(new QuizQuestion("What shape is this?", "resources/circle.png", shapeAnswers1));
 
             List<Answer> shapeAnswers2 = new ArrayList<>();
-            shapeAnswers2.add(new Answer("Triangle", true));
+            shapeAnswers2.add(new Answer("Star", false));
             shapeAnswers2.add(new Answer("Square", false));
             shapeAnswers2.add(new Answer("Circle", false));
-            shapeAnswers2.add(new Answer("Rectangle", false));
+            shapeAnswers2.add(new Answer("Triangle", true));
             questions.add(new QuizQuestion("What shape is this?", "resources/triangle.png", shapeAnswers2));
 
-            // adding more shape questions if needed
+            List<Answer> shapeAnswers3 = new ArrayList<>();
+            shapeAnswers3.add(new Answer("Diamond", false));
+            shapeAnswers3.add(new Answer("Square", false));
+            shapeAnswers3.add(new Answer("Star", true));
+            shapeAnswers3.add(new Answer("Circle", false));
+            questions.add(new QuizQuestion("What shape is this?", "resources/star.png", shapeAnswers3));
+
+            List<Answer> shapeAnswers4 = new ArrayList<>();
+            shapeAnswers4.add(new Answer("Triangle", false));
+            shapeAnswers4.add(new Answer("Heart", true));
+            shapeAnswers4.add(new Answer("Circle", false));
+            shapeAnswers4.add(new Answer("Rectangle", false));
+            questions.add(new QuizQuestion("What shape is this?", "resources/heart.png", shapeAnswers4));
+
         } else if (quizType.equals("colors")) {
             List<Answer> colorAnswers1 = new ArrayList<>();
             colorAnswers1.add(new Answer("Red", true));
@@ -61,9 +74,9 @@ public class QuizQuestion {
             // adding more color questions if needed
         } else if (quizType.equals("numbers")) {
             List<Answer> numberAnswers1 = new ArrayList<>();
-            numberAnswers1.add(new Answer("3", true));
-            numberAnswers1.add(new Answer("2", false));
             numberAnswers1.add(new Answer("4", false));
+            numberAnswers1.add(new Answer("2", false));
+            numberAnswers1.add(new Answer("3", true));
             numberAnswers1.add(new Answer("5", false));
             questions.add(new QuizQuestion("What number is this?", "resources/three.png", numberAnswers1));
 
@@ -74,7 +87,20 @@ public class QuizQuestion {
             numberAnswers2.add(new Answer("3", false));
             questions.add(new QuizQuestion("What number is this?", "resources/five.png", numberAnswers2));
 
-            // adding more number questions if needed
+            List<Answer> numberAnswers3 = new ArrayList<>();
+            numberAnswers3.add(new Answer("55", false));
+            numberAnswers3.add(new Answer("12", true));
+            numberAnswers3.add(new Answer("14", false));
+            numberAnswers3.add(new Answer("13", false));
+            questions.add(new QuizQuestion("What number is this?", "resources/12.png", numberAnswers3));
+
+            List<Answer> numberAnswers4 = new ArrayList<>();
+            numberAnswers4.add(new Answer("1", false));
+            numberAnswers4.add(new Answer("13", false));
+            numberAnswers4.add(new Answer("4", false));
+            numberAnswers4.add(new Answer("11", true));
+            questions.add(new QuizQuestion("What number is this?", "resources/11.png", numberAnswers4));
+
         }
 
         createAndShowGUI(questions);
